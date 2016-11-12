@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-  <!--  <link href="css/signin.css" rel="stylesheet"> -->
+   <link href="css/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,7 +31,6 @@
   <body>
 
     <div class="container">
-
       <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
