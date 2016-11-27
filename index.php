@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+include_once 'includes/login_process.php';
+
+if(isset($_SESSION['user'])){
+header("location: dashboard.php");
+}
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -29,22 +38,22 @@
   </head>
 
   <body>
-
     <div class="container">
-      <form class="form-signin">
+      <form class="form-signin" method="POST" action="">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
             <label for="forgotPassword" class="forgotpw"><a href="#">Forgot password?</a></label>
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Sign in</button>
       </form>
+      <span><?php echo $error; ?></span>
 
     </div> <!-- /container -->
 

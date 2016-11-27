@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+include 'includes/login_process.php';
+if (!isset($_SESSION['user'])) {
+  header("location: index.php");
+}
+
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -47,7 +54,7 @@
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="includes/logout_process.php">Logout</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
